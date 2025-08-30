@@ -1,0 +1,92 @@
+================================================================================
+COMPREHENSIVE DATABASE BENCHMARK REPORT
+Chicago 311 Service Requests - Performance Analysis
+================================================================================
+Report Generated: 2025-08-30 08:11:54
+
+EXECUTIVE SUMMARY
+----------------------------------------
+• Total Records Analyzed: 505,030
+• Databases Tested: 2
+• Test Categories: 3 (Basic Search, Text Search, Complex Queries)
+
+PERFORMANCE RANKINGS BY CATEGORY
+----------------------------------------
+
+🏆 Basic Search:
+   1. MongoDB: 0.0031s average
+   2. PostgreSQL: 0.0180s average
+
+🏆 Text Search:
+   1. MongoDB: 0.0026s average
+   2. PostgreSQL: 0.0342s average
+
+🏆 Complex Queries:
+   1. MongoDB: 0.0019s average
+   2. PostgreSQL: 0.0244s average
+
+
+DETAILED RESULTS BY DATABASE
+----------------------------------------
+
+MONGODB (document)
+Records: 30
+====================
+
+Basic Search:
+  • Count All: 0.0071s (30 results)
+  • Status Filter: 0.0020s (0 results)
+  • Department Filter: 0.0027s (0 results)
+  • Date Range: 0.0010s (0 results)
+  • Ward Filter: 0.0027s (0 results)
+
+Text Search:
+  • Simple Text: 0.0087s (5 results)
+  • Multi-word Search: 0.0018s (5 results)
+  • Partial Match: 0.0009s (0 results)
+  • Complex Text: 0.0008s (0 results)
+  • Case Insensitive: 0.0008s (1 results)
+
+Complex Queries:
+  • Geospatial Range: 0.0013s (0 results)
+  • Multi-condition: 0.0018s (0 results)
+  • Aggregation: 0.0013s (5 results)
+  • Top Wards: 0.0032s (0 results)
+
+POSTGRESQL (relational)
+Records: 505,000
+====================
+
+Basic Search:
+  • Count All: 0.0221s (505000 results)
+  • Status Filter: 0.0025s (5684 results)
+  • Department Filter: 0.0639s (0 results)
+  • Date Range: 0.0006s (0 results)
+  • Ward Filter: 0.0008s (6450 results)
+
+Text Search:
+  • Simple Text: 0.0253s (41440 results)
+  • Multi-word Search: 0.0260s (29636 results)
+  • Partial Match: 0.0253s (15338 results)
+  • Complex Text: 0.0683s (0 results)
+  • Case Insensitive: 0.0261s (17795 results)
+
+Complex Queries:
+  • Geospatial Range: 0.0349s (160824 results)
+  • Multi-condition: 0.0005s (0 results)
+  • Aggregation: 0.0315s (10 results)
+  • Top Wards: 0.0309s (10 results)
+
+
+RECOMMENDATIONS
+----------------------------------------
+🎯 Overall Best Performer: MongoDB
+   • MongoDB: Best for flexible document operations
+   • PostgreSQL: Ideal for complex relational queries
+
+💡 General Recommendations:
+   • Use Elasticsearch for search-heavy applications
+   • Use PostgreSQL for complex relational operations
+   • Use MongoDB for flexible document storage
+   • Use DuckDB for analytical and data science workloads
+   • Consider data size and query patterns when choosing
