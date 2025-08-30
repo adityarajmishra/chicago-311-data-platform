@@ -1,0 +1,103 @@
+================================================================================
+ALL 4 DATABASES COMPREHENSIVE STRESS TEST REPORT
+Chicago 311 Service Requests - Stress Testing Analysis
+================================================================================
+Report Generated: 2025-08-30 10:25:30
+
+EXECUTIVE SUMMARY
+----------------------------------------
+• Databases Tested: 4
+• Available Databases: MongoDB, Elasticsearch, PostgreSQL, DuckDB
+
+PERFORMANCE RANKINGS
+----------------------------------------
+🏆 Best Concurrent Performance: DuckDB
+🏆 Best Bulk Insert Performance: MongoDB
+
+DETAILED RESULTS BY DATABASE
+----------------------------------------
+
+MONGODB (document)
+====================
+
+Concurrent Read Performance:
+  • 1 users: 3.15 ops/sec (100.0% success)
+  • 5 users: 15.18 ops/sec (100.0% success)
+  • 10 users: 27.98 ops/sec (100.0% success)
+  • 25 users: 28.73 ops/sec (100.0% success)
+  • 50 users: 25.62 ops/sec (100.0% success)
+  • 100 users: 28.84 ops/sec (100.0% success)
+
+Bulk Insert Performance:
+  • Batch 100: 18507 records/sec
+  • Batch 500: 57535 records/sec
+  • Batch 1000: 60016 records/sec
+  • Batch 5000: 78016 records/sec
+  • Batch 10000: 84116 records/sec
+
+ELASTICSEARCH (search)
+====================
+
+Concurrent Read Performance:
+  • 1 users: 275.27 ops/sec (100.0% success)
+  • 5 users: 1048.89 ops/sec (100.0% success)
+  • 10 users: 1442.53 ops/sec (100.0% success)
+  • 25 users: 1658.40 ops/sec (100.0% success)
+  • 50 users: 801.02 ops/sec (100.0% success)
+  • 100 users: 1340.89 ops/sec (100.0% success)
+
+Bulk Insert Performance:
+  • Batch 100: 857 records/sec
+  • Batch 500: 35411 records/sec
+  • Batch 1000: 38394 records/sec
+  • Batch 5000: 37161 records/sec
+  • Batch 10000: 28592 records/sec
+
+POSTGRESQL (relational)
+====================
+
+Concurrent Read Performance:
+  • 1 users: 22.17 ops/sec (100.0% success)
+  • 5 users: 53.52 ops/sec (100.0% success)
+  • 10 users: 31.83 ops/sec (100.0% success)
+  • 25 users: 52.30 ops/sec (100.0% success)
+  • 50 users: 52.90 ops/sec (100.0% success)
+  • 100 users: 48.09 ops/sec (100.0% success)
+
+Bulk Insert Performance:
+  • Batch 100: 6739 records/sec
+  • Batch 500: 14527 records/sec
+  • Batch 1000: 14486 records/sec
+  • Batch 5000: 14427 records/sec
+  • Batch 10000: 13643 records/sec
+
+DUCKDB (analytical)
+====================
+
+Concurrent Read Performance:
+  • 1 users: 178.79 ops/sec (100.0% success)
+  • 5 users: 1484.50 ops/sec (100.0% success)
+  • 10 users: 1113.58 ops/sec (100.0% success)
+  • 25 users: 2446.40 ops/sec (100.0% success)
+  • 50 users: 3698.81 ops/sec (100.0% success)
+  • 100 users: 4670.25 ops/sec (100.0% success)
+
+Bulk Insert Performance:
+  • Batch 100: 4125 records/sec
+  • Batch 500: 4819 records/sec
+  • Batch 1000: 5685 records/sec
+  • Batch 5000: 6892 records/sec
+  • Batch 10000: 6578 records/sec
+
+
+RECOMMENDATIONS
+----------------------------------------
+🎯 Database Recommendations:
+   • Choose based on your specific load patterns
+   • Consider concurrent user requirements
+   • Evaluate bulk insert needs
+
+💡 Performance Insights:
+   • Monitor success rates under high concurrency
+   • Optimize batch sizes for bulk operations
+   • Consider database-specific tuning parameters

@@ -1,0 +1,143 @@
+================================================================================
+ALL 4 DATABASES COMPREHENSIVE BENCHMARK REPORT
+Chicago 311 Service Requests - Performance Analysis
+================================================================================
+Report Generated: 2025-08-30 10:22:47
+
+EXECUTIVE SUMMARY
+----------------------------------------
+• Databases Tested: 4
+• Available Databases: MongoDB, Elasticsearch, PostgreSQL, DuckDB
+
+PERFORMANCE RANKINGS BY CATEGORY
+----------------------------------------
+
+🏆 Basic Search:
+   Winner: DuckDB (0.0018s average)
+
+🏆 Text Search:
+   Winner: DuckDB (0.0023s average)
+
+🏆 Complex Queries:
+   Winner: DuckDB (0.0022s average)
+
+
+DETAILED RESULTS BY DATABASE
+----------------------------------------
+
+MONGODB (document)
+Records: 1,010,000
+====================
+
+Basic Search:
+  • Count All: 0.3298s (1010000 results)
+  • Status Filter: 0.0013s (797 results)
+  • Department Filter: 0.0007s (0 results)
+  • Date Range: 0.4086s (0 results)
+  • Ward Filter: 0.0077s (12210 results)
+
+Text Search:
+  • Simple Text: 0.0796s (73064 results)
+  • Multi-word Search: 0.1998s (149566 results)
+  • Partial Match: 0.0328s (38994 results)
+  • Complex Text: 0.0193s (14474 results)
+  • Case Insensitive: 0.1024s (68572 results)
+
+Complex Queries:
+  • Geospatial Range: 0.8873s (350036 results)
+  • Multi-condition: 0.0086s (35 results)
+  • Aggregation: 0.5448s (16 results)
+  • Top Analysis: 0.7426s (10 results)
+  • Time Series: 0.0000s (0 results)
+
+ELASTICSEARCH (search)
+Records: 1,010,000
+====================
+
+Basic Search:
+  • Count All: 0.0016s (1010000 results)
+  • Status Filter: 0.0025s (797 results)
+  • Department Filter: 0.0204s (267522 results)
+  • Date Range: 0.0031s (0 results)
+  • Ward Filter: 0.0050s (12210 results)
+
+Text Search:
+  • Simple Text: 0.0018s (73064 results)
+  • Multi-word Search: 0.0092s (149557 results)
+  • Partial Match: 0.0014s (38994 results)
+  • Complex Text: 0.0029s (14402 results)
+  • Case Insensitive: 0.0044s (68572 results)
+
+Complex Queries:
+  • Geospatial Range: 0.0165s (350047 results)
+  • Multi-condition: 0.0112s (35 results)
+  • Aggregation: 0.0389s (16 results)
+  • Top Analysis: 0.0236s (10 results)
+  • Time Series: 0.0313s (51 results)
+
+POSTGRESQL (relational)
+Records: 1,010,000
+====================
+
+Basic Search:
+  • Count All: 0.0372s (1010000 results)
+  • Status Filter: 0.1260s (797 results)
+  • Department Filter: 0.0499s (0 results)
+  • Date Range: 0.0703s (0 results)
+  • Ward Filter: 0.0549s (12210 results)
+
+Text Search:
+  • Simple Text: 0.0816s (73064 results)
+  • Multi-word Search: 0.0979s (59296 results)
+  • Partial Match: 0.0954s (38994 results)
+  • Complex Text: 0.0889s (0 results)
+  • Case Insensitive: 0.0925s (33054 results)
+
+Complex Queries:
+  • Geospatial Range: 0.0671s (350036 results)
+  • Multi-condition: 0.0656s (35 results)
+  • Aggregation: 0.2563s (16 results)
+  • Top Analysis: 0.0692s (10 results)
+  • Time Series: 0.1002s (12 results)
+
+DUCKDB (analytical)
+Records: 1,010,000
+====================
+
+Basic Search:
+  • Count All: 0.0006s (1010000 results)
+  • Status Filter: 0.0051s (797 results)
+  • Department Filter: 0.0009s (0 results)
+  • Date Range: 0.0000s (0 results)
+  • Ward Filter: 0.0004s (0 results)
+
+Text Search:
+  • Simple Text: 0.0041s (73064 results)
+  • Multi-word Search: 0.0020s (59296 results)
+  • Partial Match: 0.0015s (38994 results)
+  • Complex Text: 0.0017s (0 results)
+  • Case Insensitive: 0.0023s (0 results)
+
+Complex Queries:
+  • Geospatial Range: 0.0033s (0 results)
+  • Multi-condition: 0.0006s (0 results)
+  • Aggregation: 0.0020s (16 results)
+  • Top Analysis: 0.0028s (2 results)
+  • Time Series: 0.0000s (0 results)
+
+
+RECOMMENDATIONS
+----------------------------------------
+🎯 Database Recommendations:
+   • Overall Best Performer: DuckDB
+   • MongoDB: Best for flexible document operations
+   • Elasticsearch: Ideal for search-heavy applications
+   • PostgreSQL: Perfect for complex relational queries
+   • DuckDB: Excellent for analytical and data science workloads
+
+💡 General Recommendations:
+   • Choose based on your specific use case and query patterns
+   • Consider data size and performance requirements
+   • MongoDB and Elasticsearch scale well for large datasets
+   • PostgreSQL offers ACID compliance and complex joins
+   • DuckDB provides excellent analytical performance
